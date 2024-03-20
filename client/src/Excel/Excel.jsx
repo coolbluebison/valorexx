@@ -7,13 +7,19 @@ export default function Excel(){
     let [active, setActive] = useState(sections[0])
 
     let navBar = sections.map(sec => (
-        <div className="border-2 border-black flex items-center justify-center w-32 h-8">
+        <div className=
+        {active === sec ? 
+            "flex items-center justify-center w-32 h-8 bg-white cursor-pointer select-none":
+            "flex items-center justify-center w-32 h-8 cursor-pointer select-none"
+        }
+        onClick={()=>setActive(sec)}
+        >
             <p>{sec}</p>
         </div>
     ))
 
     return(
-        <div className="absolute bottom-5 flex justify-left w-screen px-20">
+        <div className="absolute bottom-4 flex justify-left w-screen px-20">
             {navBar}
         </div>
     )

@@ -5,7 +5,8 @@ function App() {
 
 
   return (
-    <div>
+    <div className='h-screen w-screen bg-gray-200 flex items-center justify-center'>
+      <div className='h-[90vh] w-[99vw] bg-white rounded-lg'></div>
       <Excel />
     </div>
   )
